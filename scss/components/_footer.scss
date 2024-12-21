@@ -1,0 +1,10 @@
+@use '../variables' as v;
+
+footer {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$color-light;
+    text-align: center;
+}

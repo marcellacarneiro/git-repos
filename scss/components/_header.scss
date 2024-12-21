@@ -1,0 +1,44 @@
+@use '../variables' as v;
+
+header {
+    padding: 1rem 0 .5rem;
+    height: 64px;
+    border-bottom: 2px solid v.$border-color-light;
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        img {
+            width: 32px;
+        }
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .25rem;
+        height: 32px;
+        width: 32px;
+        border-radius: 0.375rem;
+        border: 1px solid v.$border-color-light;
+        cursor: pointer;
+
+        .bar {
+            width: 16px;
+            height: 2px;
+            background-color: v.$icon-color-light;
+            border-radius: 1px;
+        }
+    }
+}
+
+
