@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/edit-repo.css">
+    <title>Editar Repositório</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="./assets/github-original.svg" alt="" class="logo">
+            </div>
+            <nav class="menu-container">
+                <ul class="menu">
+                    <li class="menu-item"><a href="./index.html">Repositórios</a></li>
+                    <li class="menu-item"><a href="./register-repo.html">Adicionar Repositório</a></li>
+                </ul>
+            </nav>
+            <div class="menu-hamburger" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <dialog id="menuModal">
+        <div class="modal-content">
+            <div class="modal-content__header">
+                <span id="closeModal" class="close">
+                    <img src="./assets/icons/close.svg" alt="">
+                </span>
+            </div>
+            <ul class="modal-menu">
+                <li>
+                    <a href="./index.html">
+                        <img src="./assets/icons/home.svg" alt="">
+                        <span>Repositórios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./register-repo.html">
+                        <img src="./assets/icons/plus.svg" alt="">
+                        <span>Adicionar Repositório</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <main>
+        <div class="container">
+            <div class="title-container">
+                <h1>Editar Repositório</h1>
+            </div>
+            <form>
+                <div class="form-left">
+                    <div class="input-container">
+                        <label for="name">Nome do Repositório *</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="input-container">
+                        <label for="description">Descrição</label>
+                        <textarea name="description" id="description" cols="10" rows="10"></textarea>
+                    </div>
+                    <div class="input-container">
+                        <label for="languages">Linguagens / Ferramentas</label>
+                        <input type="text" name="languages" id="languages">
+                    </div>
+                    <div class="input-container">
+                        <label for="figmaUrl">Link do projeto no Figma</label>
+                        <input type="text" name="figmaUrl" id="figmaUrl">
+                    </div>
+                    <div class="input-container">
+                        <label for="githubUrl">Link do projeto no GitHub</label>
+                        <input type="text" name="githubUrl" id="githubUrl">
+                    </div>
+                    <div class="input-container">
+                        <label for="deployUrl">Link do Deploy</label>
+                        <input type="text" name="deployUrl" id="deployUrl">
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="input-container">
+                        <label for="image">Imagem</label>
+                        <div class="custom-file-wrapper">
+                            <label class="custom-file-label" for="image">Selecionar arquivo</label>
+                            <input class="custom-file-input" type="file" name="image" id="image"
+                                accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp">
+                        </div>
+                        <div class="file-preview"></div>
+                    </div>
+                    <div class="input-container">
+                        <label for="demo">Demo</label>
+                        <div class="custom-file-wrapper">
+                            <label class="custom-file-label" for="demo">Selecionar arquivo</label>
+                            <input class="custom-file-input" type="file" name="demo" id="demo"
+                                accept="image/gif, image/webp, image/apng">
+                        </div>
+                        <div class="file-preview"></div>
+                    </div>
+                    <button type="submit">Editar Repositório</button>
+                </div>
+        </div>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 - Todos os direitos reservados.</p>
+    </footer>
+    <script type="module" src="./js/edit-repo.js"></script>
+</body>
+
+</html>
