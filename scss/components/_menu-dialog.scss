@@ -1,4 +1,5 @@
 @use '../variables' as v;
+@use '../default';
 
 dialog {
     display: block;
@@ -64,5 +65,9 @@ dialog {
                 }
             }
         }
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
     }
 }

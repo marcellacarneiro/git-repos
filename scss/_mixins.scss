@@ -1,0 +1,11 @@
+@use './variables' as v;
+@use './default';
+
+@mixin input-style {
+    border-radius: v.$border-radius-sm;
+    border: 1px solid v.$border-color-light;
+    padding: 6px 10px;
+    &:focus {
+        outline: none;
+    }
+}

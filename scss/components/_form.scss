@@ -1,0 +1,99 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+@use '../default';
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .form-left,
+    .form-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 22px;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            label {
+                font-weight: v.$font-semibold;
+            }
+
+            input[type='text'] {
+                @include m.input-style();
+                height: 30px;
+            }
+
+            textarea {
+                @include m.input-style();
+                width: 100%;
+                min-height: 100px;
+                resize: vertical;
+            }
+
+            .custom-file-input::-webkit-file-upload-button {
+                display: none;
+            }
+
+            .custom-file-label {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 7px 10px;
+                cursor: pointer;
+                color: #59636e;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: #fff;
+            }
+
+            .custom-file-label::after {
+                content: '';
+                display: inline-block;
+                margin-left: 8px;
+                width: 12px;
+                height: 12px;
+                background-image: url('../assets/icons/arrow-down.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    .form-right {
+        gap: 62px;
+        .input-container {
+            .file-preview {
+                background-color: #e7e7e7;
+                width: 100%;
+                height: 150px;
+                border-radius: v.$border-radius-sm;
+            }
+        }
+
+        button {
+            height: 32px;
+            background-color: #1f883d;
+            border: none;
+            border-radius: v.$border-radius-sm;
+            color: #fff;
+            font-weight: v.$font-semibold;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
