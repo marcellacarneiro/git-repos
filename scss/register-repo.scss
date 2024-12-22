@@ -2,122 +2,21 @@
 @use './default';
 @use 'components/header';
 @use 'components/menu-dialog';
+@use 'components/title';
+@use 'components/form';
 @use 'components/footer';
-
-@mixin input-style {
-    border-radius: v.$border-radius-sm;
-    border: 1px solid v.$border-color-light;
-    padding: 6px 10px;
-    &:focus {
-        outline: none;
-    }
-}
 
 main {
     .container {
         max-width: 768px;
 
         .title-container {
-            width: 100%;
             max-width: 320px;
             align-self: center;
-            margin-block: 36px;
         
-            h1 {
-                font-size: 20px;
-            }
-
             @media screen and (min-width: 768px) {
                 align-self: flex-start;
             }
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-
-            .form-left,
-            .form-right {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                max-width: 320px;
-                margin: 0 auto;
-                gap: 22px;
-
-                .input-container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 14px;
-
-                    label {
-                        font-weight: v.$font-semibold;
-                    }
-
-                    input[type='text'] {
-                        @include input-style();
-                        height: 30px;
-                    }
-
-                    textarea {
-                        @include input-style();
-                        width: 100%;
-                        min-height: 100px;
-                        resize: vertical;
-                    }
-
-                    .custom-file-input::-webkit-file-upload-button {
-                        display: none;
-                    }
-
-                    .custom-file-label {
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        border: 1px solid #ddd;
-                        border-radius: 4px;
-                        padding: 7px 10px;
-                        cursor: pointer;
-                        // width: 160px;
-                        color: #59636e;
-                        font-size: 14px;
-                        font-weight: 500;
-                        background-color: #fff;
-                    }
-
-                    .custom-file-label::after {
-                        content: '';
-                        display: inline-block;
-                        margin-left: 8px;
-                        width: 12px;
-                        height: 12px;
-                        background-image: url('../assets/icons/arrow-down.svg');
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                }
-            }
-            
-            .form-right {
-                button {
-                    height: 32px;
-                    background-color: #1F883D;
-                    border: none;
-                    border-radius: v.$border-radius-sm;
-                    color: #fff;
-                    font-weight: v.$font-semibold;
-                }
-            }
-
-            @media screen and (min-width: 768px) {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-        }
     }
 }
-
-
