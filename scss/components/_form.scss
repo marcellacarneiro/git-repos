@@ -1,6 +1,7 @@
 @use '../variables' as v;
 @use '../mixins' as m;
 @use '../default';
+@use './image-preview';
 
 form {
     display: flex;
@@ -50,10 +51,10 @@ form {
                 border-radius: 4px;
                 padding: 7px 10px;
                 cursor: pointer;
-                color: #59636e;
+                color: v.$label-gray-color-light;
                 font-size: 14px;
                 font-weight: 500;
-                background-color: #fff;
+                background-color: v.$bg-light;
             }
 
             .custom-file-label::after {
@@ -71,24 +72,37 @@ form {
     }
 
     .form-right {
-        gap: 62px;
-        .input-container {
-            .file-preview {
-                background-color: #e7e7e7;
-                width: 100%;
-                height: 150px;
-                border-radius: v.$border-radius-sm;
-            }
-        }
+        gap: 22px;
 
         button {
             height: 32px;
-            background-color: #1f883d;
             border: none;
             border-radius: v.$border-radius-sm;
-            color: #fff;
+            color: v.$bg-light;
             font-weight: v.$font-semibold;
             cursor: pointer;
+        }
+
+        #add-button {
+            background-color: #1f883d;
+        }
+
+        .input-container {
+            #clear-image,
+            #clear-demo {
+                background-color: #f6f8fa;
+                visibility: hidden;
+                height: 26px;
+                color: rgb(209, 36, 47);
+                font-size: 12px;
+                width: 45%;
+                border: 1px solid v.$border-color-light;
+
+                &:hover {
+                    background-color: #b62324;
+                    color: v.$bg-light;
+                }
+            }
         }
     }
 

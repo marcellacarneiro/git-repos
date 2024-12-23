@@ -57,7 +57,7 @@
             <div class="title-container">
                 <h1>Adicionar Repositório</h1>
             </div>
-            <form>
+            <form id="registration-form">
                 <div class="form-left">
                     <div class="input-container">
                         <label for="name">Nome do Repositório *</label>
@@ -92,7 +92,10 @@
                             <input class="custom-file-input" type="file" name="image" id="image"
                                 accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp">
                         </div>
-                        <div class="file-preview"></div>
+                        <div class="file-preview">
+                            <img id="image-preview" src="" alt="">
+                        </div>
+                        <button type="button" id="clear-image">Limpar Imagem</button>
                     </div>
                     <div class="input-container">
                         <label for="demo">Demo</label>
@@ -101,9 +104,12 @@
                             <input class="custom-file-input" type="file" name="demo" id="demo"
                                 accept="image/gif, image/webp, image/apng">
                         </div>
-                        <div class="file-preview"></div>
+                        <div class="file-preview">
+                            <img id="demo-preview" src="" alt="">
+                        </div>
+                        <button type="button" id="clear-demo">Limpar Demo</button>
                     </div>
-                    <button type="submit">Adicionar Repositório</button>
+                    <button id="add-button" type="submit">Adicionar Repositório</button>
                 </div>
         </div>
         </form>
