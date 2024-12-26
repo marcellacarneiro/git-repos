@@ -23,7 +23,7 @@ main {
             }
         }
 
-        .repos-container {
+        #repos-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, 240px);
             row-gap: 36px;
@@ -37,7 +37,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                max-width: 240px;
+                min-width: 240px;
                 justify-self: center;
 
                 .repo__infos {
@@ -53,6 +53,13 @@ main {
                             text-decoration: underline #0969da;
                         }
                     }
+                }
+
+                .repo__infos h3, p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 200px;
                 }
 
                 .repo__infos p,
