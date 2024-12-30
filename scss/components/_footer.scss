@@ -2,10 +2,14 @@
 @use '../default';
 
 footer {
-    height: 15vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: v.$color-light;
     text-align: center;
+    
+    p {
+        font-size: 12px;
+    }
 }
