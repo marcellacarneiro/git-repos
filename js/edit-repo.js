@@ -100,3 +100,22 @@ document.getElementById('update-form').addEventListener('submit', async function
         console.error(e);
     }
 });
+
+document.getElementById('delete-button').addEventListener('click', async function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    try {
+        const response = await fetch(`http://localhost:3001/api/repos/delete/${id}`, {
+            method: 'DELETE'
+        });
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Repositorio de id ' + id + 'foi deletado com sucesso');
+            window.location.href = `./index.html`;
+        }
+    } catch (error) {
+        console.error(error);
+    }
+});
