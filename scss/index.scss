@@ -11,11 +11,11 @@ main {
         max-width: 860px;
 
         .title-container {
-            // max-width: 240px;
+            max-width: 240px;
             align-self: center;
 
             @media screen and (min-width: 580px) {
-                // max-width: 516px;
+                max-width: 516px;
             }
 
             @media screen and (min-width: 855px) {
@@ -28,7 +28,7 @@ main {
             grid-template-columns: repeat(auto-fit, 240px);
             row-gap: 36px;
             column-gap: 36px;
-            // justify-content: center;
+            justify-content: center;
 
             .repo {
                 border: 1px solid v.$border-color-light;
@@ -39,6 +39,7 @@ main {
                 gap: 10px;
                 min-width: 240px;
                 justify-self: center;
+                justify-content: space-between;
 
                 .repo__infos {
                     a {
