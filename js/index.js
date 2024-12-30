@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             div.innerHTML = `
                 <div class="repo__infos">
-                    <a href="">
+                    <a href=edit-repo.html?id=${repo._id}>
                         <h3>${repo.name}</h3>
                     </a>
                     <p>${repo.description}</p>
