@@ -119,3 +119,7 @@ document.getElementById('delete-button').addEventListener('click', async functio
         console.error(error);
     }
 });
+
+document.getElementById('cancel-button').addEventListener('click', function () {
+    window.location.assign('./index.html')
+})

@@ -83,14 +83,6 @@ form {
             cursor: pointer;
         }
 
-        #submit-button {
-            background-color: #1f883d;
-        }
-
-        #delete-button {
-            background-color: #b62324;
-        }
-
         .input-container {
             #clear-image,
             #clear-demo {
@@ -106,6 +98,25 @@ form {
                     background-color: #b62324;
                     color: v.$bg-light;
                 }
+            }
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            #submit-button {
+                background-color: #1f883d;
+            }
+    
+            #delete-button {
+                background-color: #b62324;
+            }
+
+            #cancel-button {
+                color: rgb(209, 36, 47);
+                background-color: #f6f8fa;
+                border: 1px solid v.$border-color-light;
             }
         }
     }

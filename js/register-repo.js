@@ -44,3 +44,7 @@ document.getElementById('registration-form').addEventListener('submit', async (e
         console.error(e);
     }
 });
+
+document.getElementById('cancel-button').addEventListener('click', function () {
+    window.location.assign('./index.html')
+})
