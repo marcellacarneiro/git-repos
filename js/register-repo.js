@@ -38,14 +38,7 @@ document.getElementById('registration-form').addEventListener('submit', async (e
         const result = await response.json();
 
         if (response.ok) {
-            document.getElementById('registration-form').reset();
-            const imagePreview = document.getElementById('image-preview');
-            const demoPreview = document.getElementById('demo-preview');
-            imagePreview.style.display = 'none';
-            imagePreview.src = '';
-            demoPreview.style.display = 'none';
-            demoPreview.src = '';
-            document.getElementById('clearImage').style.display = 'none';
+            window.location.assign('http://127.0.0.1:5500/index.html')
         }
     } catch (e) {
         console.error(e);
