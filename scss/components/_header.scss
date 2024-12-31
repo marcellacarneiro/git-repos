@@ -4,7 +4,7 @@
 header {
     padding: 1rem 0 0.5rem;
     height: 11vh;
-    border-bottom: 2px solid v.$border-color-light;
+    border-bottom: 1.5px solid v.$border-color-light;
 
     .container {
         flex-direction: row;
@@ -29,6 +29,11 @@ header {
                 gap: 50px;
 
                 .menu-item {
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
                     a {
                         font-size: 14px;
                     }
