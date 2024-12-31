@@ -88,14 +88,9 @@ document.getElementById('update-form').addEventListener('submit', async function
             body: repoData,
         });
 
-        const updatedRepo = await response.json();
-
         if (response.ok) {
-            alert('Repositório atualizado com sucesso!');
             window.location.href = `./index.html`;
-        } else {
-            alert(`Erro ao atualizar repositório: ${updatedRepo.message || 'Erro desconhecido'}`);
-        }
+        } 
     } catch (e) {
         console.error(e);
     }
@@ -109,10 +104,8 @@ document.getElementById('delete-button').addEventListener('click', async functio
         const response = await fetch(`http://localhost:3001/api/repos/delete/${id}`, {
             method: 'DELETE'
         });
-        const result = await response.json();
 
         if (response.ok) {
-            alert('Repositorio de id ' + id + 'foi deletado com sucesso');
             window.location.href = `./index.html`;
         }
     } catch (error) {
