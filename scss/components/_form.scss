@@ -4,125 +4,149 @@
 @use './image-preview';
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-
-    .form-left,
-    .form-right {
+    .form-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-        gap: 22px;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 32px;
 
-        .input-container {
+        .form-left,
+        .form-right {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            gap: 22px;
 
-            label {
-                font-weight: v.$font-semibold;
-            }
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
 
-            input[type='text'] {
-                @include m.input-style();
-                height: 30px;
-            }
+                label {
+                    font-weight: v.$font-semibold;
+                }
 
-            textarea {
-                @include m.input-style();
-                width: 100%;
-                min-height: 100px;
-                resize: vertical;
-            }
+                input[type='text'] {
+                    @include m.input-style();
+                    height: 30px;
+                }
 
-            .custom-file-input::-webkit-file-upload-button {
-                display: none;
-            }
+                textarea {
+                    @include m.input-style();
+                    width: 100%;
+                    min-height: 100px;
+                    resize: vertical;
+                }
 
-            .custom-file-label {
-                display: inline-flex;
-                align-items: center;
-                justify-content: space-between;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                padding: 7px 10px;
-                cursor: pointer;
-                color: v.$label-gray-color-light;
-                font-size: 14px;
-                font-weight: 500;
-                background-color: v.$bg-light;
-            }
+                .custom-file-input::-webkit-file-upload-button {
+                    display: none;
+                }
 
-            .custom-file-label::after {
-                content: '';
-                display: inline-block;
-                margin-left: 8px;
-                width: 12px;
-                height: 12px;
-                background-image: url('../assets/icons/arrow-down.svg');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
+                .custom-file-label {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    padding: 7px 10px;
+                    cursor: pointer;
+                    color: v.$label-gray-color-light;
+                    font-size: 14px;
+                    font-weight: 500;
+                    background-color: v.$bg-light;
+                }
+
+                .custom-file-label::after {
+                    content: '';
+                    display: inline-block;
+                    margin-left: 8px;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url('../assets/icons/arrow-down.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
             }
+        }
+
+        .form-right {
+            gap: 22px;
+
+            .input-container {
+                #clear-image,
+                #clear-demo {
+                    background-color: #f6f8fa;
+                    visibility: hidden;
+                    height: 26px;
+                    color: rgb(209, 36, 47);
+                    font-size: 12px;
+                    width: 45%;
+                    border: 1px solid v.$border-color-light;
+
+                    &:hover {
+                        background-color: #b62324;
+                        color: v.$bg-light;
+                    }
+                }
+
+                button {
+                    border-radius: v.$border-radius-sm;
+                    font-weight: v.$font-semibold;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
         }
     }
 
-    .form-right {
-        gap: 22px;
+    .actions-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
 
         button {
             height: 32px;
+            width: 100%;
+            max-width: 320px;
             border: none;
             border-radius: v.$border-radius-sm;
             color: v.$bg-light;
             font-weight: v.$font-semibold;
             cursor: pointer;
-        }
 
-        .input-container {
-            #clear-image,
-            #clear-demo {
-                background-color: #f6f8fa;
-                visibility: hidden;
-                height: 26px;
-                color: rgb(209, 36, 47);
-                font-size: 12px;
-                width: 45%;
-                border: 1px solid v.$border-color-light;
-
-                &:hover {
-                    background-color: #b62324;
-                    color: v.$bg-light;
-                }
+            @media screen and (min-width: 768px) {
+                width: 40%;
+                max-width: none;
             }
         }
-        .actions-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-    
-            #submit-button {
-                background-color: #1f883d;
-            }
-    
-            #delete-button {
-                background-color: #b62324;
-            }
 
-            #cancel-button {
-                color: rgb(209, 36, 47);
-                background-color: #f6f8fa;
-                border: 1px solid v.$border-color-light;
-            }
+        #submit-button {
+            background-color: #1f883d;
         }
-    }
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: flex-start;
+        #delete-button {
+            background-color: #b62324;
+        }
+
+        #cancel-button {
+            color: rgb(209, 36, 47);
+            background-color: #f6f8fa;
+            border: 1px solid v.$border-color-light;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 32px;
+        }
     }
 }

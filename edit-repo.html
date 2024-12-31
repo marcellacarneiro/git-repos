@@ -58,65 +58,67 @@
                 <h1>Editar Repositório</h1>
             </div>
             <form id="update-form">
-                <div class="form-left">
-                    <div class="input-container">
-                        <label for="name">Nome do Repositório *</label>
-                        <input type="text" name="name" id="name">
+                <div class="form-container">
+                    <div class="form-left">
+                        <div class="input-container">
+                            <label for="name">Nome do Repositório *</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="input-container">
+                            <label for="description">Descrição</label>
+                            <textarea name="description" id="description" cols="10" rows="10"></textarea>
+                        </div>
+                        <div class="input-container">
+                            <label for="languages">Linguagens / Ferramentas</label>
+                            <input type="text" name="languages" id="languages">
+                        </div>
+                        <div class="input-container">
+                            <label for="figmaUrl">Link do projeto no Figma</label>
+                            <input type="text" name="figmaUrl" id="figmaUrl">
+                        </div>
+                        <div class="input-container">
+                            <label for="githubUrl">Link do projeto no GitHub</label>
+                            <input type="text" name="githubUrl" id="githubUrl">
+                        </div>
+                        <div class="input-container">
+                            <label for="deployUrl">Link do Deploy</label>
+                            <input type="text" name="deployUrl" id="deployUrl">
+                        </div>
                     </div>
-                    <div class="input-container">
-                        <label for="description">Descrição</label>
-                        <textarea name="description" id="description" cols="10" rows="10"></textarea>
-                    </div>
-                    <div class="input-container">
-                        <label for="languages">Linguagens / Ferramentas</label>
-                        <input type="text" name="languages" id="languages">
-                    </div>
-                    <div class="input-container">
-                        <label for="figmaUrl">Link do projeto no Figma</label>
-                        <input type="text" name="figmaUrl" id="figmaUrl">
-                    </div>
-                    <div class="input-container">
-                        <label for="githubUrl">Link do projeto no GitHub</label>
-                        <input type="text" name="githubUrl" id="githubUrl">
-                    </div>
-                    <div class="input-container">
-                        <label for="deployUrl">Link do Deploy</label>
-                        <input type="text" name="deployUrl" id="deployUrl">
+                    <div class="form-right">
+                        <div class="input-container">
+                            <label for="image">Imagem</label>
+                            <div class="custom-file-wrapper">
+                                <label class="custom-file-label" for="image">Selecionar arquivo</label>
+                                <input class="custom-file-input" type="file" name="image" id="image"
+                                    accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp">
+                            </div>
+                            <div class="file-preview">
+                                <img id="image-preview" src="" alt="">
+                            </div>
+                            <button type="button" id="clear-image">Limpar Imagem</button>
+                        </div>
+                        <div class="input-container">
+                            <label for="demo">Demo</label>
+                            <div class="custom-file-wrapper">
+                                <label class="custom-file-label" for="demo">Selecionar arquivo</label>
+                                <input class="custom-file-input" type="file" name="demo" id="demo"
+                                    accept="image/gif, image/webp, image/apng">
+                            </div>
+                            <div class="file-preview">
+                                <img id="demo-preview" src="" alt="">
+                            </div>
+                            <button type="button" id="clear-demo">Limpar Demo</button>
+                        </div>
                     </div>
                 </div>
-                <div class="form-right">
-                    <div class="input-container">
-                        <label for="image">Imagem</label>
-                        <div class="custom-file-wrapper">
-                            <label class="custom-file-label" for="image">Selecionar arquivo</label>
-                            <input class="custom-file-input" type="file" name="image" id="image"
-                                accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp">
-                        </div>
-                        <div class="file-preview">
-                            <img id="image-preview" src="" alt="">
-                        </div>
-                        <button type="button" id="clear-image">Limpar Imagem</button>
-                    </div>
-                    <div class="input-container">
-                        <label for="demo">Demo</label>
-                        <div class="custom-file-wrapper">
-                            <label class="custom-file-label" for="demo">Selecionar arquivo</label>
-                            <input class="custom-file-input" type="file" name="demo" id="demo"
-                                accept="image/gif, image/webp, image/apng">
-                        </div>
-                        <div class="file-preview">
-                            <img id="demo-preview" src="" alt="">
-                        </div>
-                        <button type="button" id="clear-demo">Limpar Demo</button>
-                    </div>
-                    <div class="actions-container">
-                        <button id="submit-button" type="submit">Editar Repositório</button>
-                        <button id="delete-button" type="button">Deletar Repositório</button>
-                        <button id="cancel-button" type="button">Cancelar</button>
-                    </div>
+                <div class="actions-container">
+                    <button id="submit-button" type="submit">Editar Repositório</button>
+                    <button id="delete-button" type="button">Deletar Repositório</button>
+                    <button id="cancel-button" type="button">Cancelar</button>
                 </div>
+            </form>
         </div>
-        </form>
     </main>
     <footer>
         <p>© 2024 - Todos os direitos reservados.</p>
