@@ -78,5 +78,32 @@ main {
                 }
             }
         }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+
+            span {
+                font-size: 13px;
+            }
+
+            button {
+                width: 20px;
+                height: 20px;
+                border: v.$border-color-light solid 1px;
+                border-radius: 50%;
+                background-color: v.$bg-light;
+                cursor: pointer;
+
+                &:disabled {
+                    background-color: #ececec;
+                    color: #7c7c7c;
+                    cursor: not-allowed;
+                }
+            }
+        }
     }
 }
