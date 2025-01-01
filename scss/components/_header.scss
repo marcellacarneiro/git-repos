@@ -4,7 +4,7 @@
 
 header {
     padding: 1rem 0 0.5rem;
-    height: 64px;
+    height: 4rem;
     border-bottom: 1.5px solid v.$border-color-light;
 
     .container {
@@ -14,7 +14,7 @@ header {
 
     .logo-container {
         img {
-            width: 32px;
+            width: 2rem;
         }
     }
 
@@ -36,7 +36,7 @@ header {
                     }
 
                     a {
-                        font-size: 14px;
+                        font-size: 0.825rem;
                     }
                 }
             }
@@ -47,15 +47,15 @@ header {
         @include m.flex-center();
         flex-direction: column;
         gap: 0.25rem;
-        height: 32px;
-        width: 32px;
+        height: 2rem;
+        width: 2rem;
         border-radius: 0.375rem;
         border: 1px solid v.$border-color-light;
         cursor: pointer;
 
         .bar {
-            width: 16px;
-            height: 2px;
+            width: 1rem;
+            height: 0.125rem;
             background-color: v.$label-gray-color-light;
             border-radius: 1px;
         }

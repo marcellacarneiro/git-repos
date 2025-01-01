@@ -8,22 +8,22 @@ form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 32px;
-        margin-bottom: 32px;
+        gap: 2rem;
+        margin-bottom: 2rem;
 
         .form-left,
         .form-right {
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 320px;
+            max-width: 20rem;
             margin: 0 auto;
-            gap: 22px;
+            gap: 1.375rem;
 
             .input-container {
                 display: flex;
                 flex-direction: column;
-                gap: 14px;
+                gap: 0.875rem;
 
                 label {
                     font-weight: v.$font-semibold;
@@ -31,13 +31,13 @@ form {
 
                 input[type='text'] {
                     @include m.input-style();
-                    height: 30px;
+                    height: 1.875rem;
                 }
 
                 textarea {
                     @include m.input-style();
                     width: 100%;
-                    min-height: 100px;
+                    min-height: 6.25rem;
                     resize: vertical;
                 }
 
@@ -50,11 +50,11 @@ form {
                     align-items: center;
                     justify-content: space-between;
                     border: 1px solid #ddd;
-                    border-radius: 4px;
-                    padding: 7px 10px;
+                    border-radius: 0.25rem;
+                    padding: 0.4rem 0.625rem;
                     cursor: pointer;
                     color: v.$label-gray-color-light;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                     font-weight: 500;
                     background-color: v.$bg-light;
                 }
@@ -62,9 +62,9 @@ form {
                 .custom-file-label::after {
                     content: '';
                     display: inline-block;
-                    margin-left: 8px;
-                    width: 12px;
-                    height: 12px;
+                    margin-left: 0.5rem;
+                    width: 0.75rem;
+                    height: 0.75rem;
                     background-image: url('../assets/icons/arrow-down.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -74,16 +74,16 @@ form {
         }
 
         .form-right {
-            gap: 22px;
+            gap: 1.375rem;
 
             .input-container {
                 #clear-image,
                 #clear-demo {
                     background-color: #f6f8fa;
                     visibility: hidden;
-                    height: 26px;
+                    height: 1.625rem;
                     color: rgb(209, 36, 47);
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     width: 45%;
                     border: 1px solid v.$border-color-light;
 
@@ -110,14 +110,19 @@ form {
     .actions-container {
         @include m.flex-center();
         flex-direction: column;
-        gap: 12px;
+        gap: 0.75rem;
+
+        @media screen and (min-width: 768px) {
+            gap: 0;
+        }
 
         button {
-            height: 32px;
+            height: 2rem;
             width: 100%;
-            max-width: 320px;
+            max-width: 20rem;
             border: none;
             border-radius: v.$border-radius-sm;
+            font-size: 0.8rem;
             color: v.$bg-light;
             font-weight: v.$font-semibold;
             cursor: pointer;
@@ -144,7 +149,7 @@ form {
 
         @media screen and (min-width: 768px) {
             flex-direction: row-reverse;
-            gap: 32px;
+            gap: 2rem;
         }
     }
 }
