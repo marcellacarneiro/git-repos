@@ -1,4 +1,5 @@
 @use './variables' as v;
+@use './mixins' as m;
 @use './default';
 @use 'components/header';
 @use 'components/menu-dialog';
@@ -90,9 +91,7 @@ main {
         }
 
         .pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include m.flex-center();
             gap: 12px;
             margin-top: 24px;
 

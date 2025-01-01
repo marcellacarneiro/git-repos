@@ -108,11 +108,9 @@ form {
     }
 
     .actions-container {
-        display: flex;
+        @include m.flex-center();
         flex-direction: column;
         gap: 12px;
-        align-items: center;
-        justify-content: center;
 
         button {
             height: 32px;
