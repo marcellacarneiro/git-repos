@@ -12,6 +12,16 @@ header {
     }
 }
 
+dialog {
+    .modal-menu {
+        li:nth-child(1) {
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 main {
     .container {
         max-width: 860px;
