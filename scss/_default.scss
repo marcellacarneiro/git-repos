@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
-    color: v.$color-light;
+    color: v.$text-default-color;
 }
 
 .container {
@@ -19,7 +19,7 @@
 }
 
 body {
-    background-color: v.$bg-light;
+    background-color: v.$bg-default-color;
     min-height: 100vh;
 }
 

@@ -8,7 +8,7 @@
 
 header {
     .menu-item:nth-child(2) {
-        font-weight: bold;
+        font-weight: v.$font-weight-bold;
     }
 }
 
@@ -16,7 +16,7 @@ dialog {
     .modal-menu {
         li:nth-child(2) {
             span {
-                font-weight: bold;
+                font-weight: v.$font-weight-bold;
             }
         }
     }
@@ -27,9 +27,8 @@ main {
         max-width: 768px;
 
         .title-container {
-            // max-width: 320px;
             align-self: center;
-        
+
             @media screen and (min-width: 768px) {
                 align-self: flex-start;
             }

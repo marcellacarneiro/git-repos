@@ -26,7 +26,7 @@ form {
                 gap: 0.875rem;
 
                 label {
-                    font-weight: v.$font-semibold;
+                    font-weight: v.$font-weight-semi-bold;
                 }
 
                 input[type='text'] {
@@ -49,14 +49,14 @@ form {
                     display: inline-flex;
                     align-items: center;
                     justify-content: space-between;
-                    border: 1px solid #ddd;
+                    border: v.$border-style;
                     border-radius: 0.25rem;
                     padding: 0.4rem 0.625rem;
                     cursor: pointer;
-                    color: v.$label-gray-color-light;
-                    font-size: 0.875rem;
+                    color: v.$text-gray-color;
+                    font-size: v.$font-size-lg;
                     font-weight: 500;
-                    background-color: v.$bg-light;
+                    background-color: v.$bg-default-color;
                 }
 
                 .custom-file-label::after {
@@ -82,20 +82,20 @@ form {
                     background-color: #f6f8fa;
                     visibility: hidden;
                     height: 1.625rem;
-                    color: rgb(209, 36, 47);
-                    font-size: 0.75rem;
+                    color: v.$text-red-color;
+                    font-size: v.$font-size-sm;
                     width: 45%;
-                    border: 1px solid v.$border-color-light;
+                    border: v.$border-style;
 
                     &:hover {
-                        background-color: #b62324;
-                        color: v.$bg-light;
+                        background-color: v.$bg-red-color;
+                        color: v.$text-white-color;
                     }
                 }
 
                 button {
                     border-radius: v.$border-radius-sm;
-                    font-weight: v.$font-semibold;
+                    font-weight: v.$font-weight-semi-bold;
                     cursor: pointer;
                 }
             }
@@ -122,9 +122,9 @@ form {
             max-width: 20rem;
             border: none;
             border-radius: v.$border-radius-sm;
-            font-size: 0.8rem;
-            color: v.$bg-light;
-            font-weight: v.$font-semibold;
+            font-size: v.$font-size-md;
+            color: v.$text-white-color;
+            font-weight: v.$font-weight-semi-bold;
             cursor: pointer;
 
             @media screen and (min-width: 768px) {
@@ -134,17 +134,17 @@ form {
         }
 
         #submit-button {
-            background-color: #1f883d;
+            background-color: v.$bg-green-color;
         }
 
         #delete-button {
-            background-color: #b62324;
+            background-color: v.$bg-red-color;
         }
 
         #cancel-button {
-            color: rgb(209, 36, 47);
+            color: v.$text-red-color;
             background-color: #f6f8fa;
-            border: 1px solid v.$border-color-light;
+            border: v.$border-style;
         }
 
         @media screen and (min-width: 768px) {

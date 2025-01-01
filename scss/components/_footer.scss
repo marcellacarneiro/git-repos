@@ -5,10 +5,10 @@
 footer {
     @include m.flex-center();
     height: 3.75rem;
-    color: v.$color-light;
+    color: v.$text-default-color;
     text-align: center;
 
     p {
-        font-size: 0.75rem;
+        font-size: v.$font-size-sm;
     }
 }

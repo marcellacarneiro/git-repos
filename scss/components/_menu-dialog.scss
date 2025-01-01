@@ -8,7 +8,7 @@ dialog {
     right: 0;
     width: 80vw;
     height: 100%;
-    background-color: v.$bg-light;
+    background-color: v.$bg-default-color;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
     border: none;
@@ -53,11 +53,12 @@ dialog {
                 a {
                     display: flex;
                     text-decoration: none;
-                    font-size: 1rem;
+                    font-size: v.$font-size-xl;
+                    gap: 1rem;
 
                     img {
                         width: 1.5rem;
-                        height: 1.5rem;
+                        height: 1.75rem;
                     }
 
                     span {
