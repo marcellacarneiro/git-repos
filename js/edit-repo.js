@@ -1,5 +1,6 @@
 import { setupMenuModal } from './modal.js';
 import { showImagePreview, showDemoPreview, clearImagePreview, clearDemoPreview } from './previews.js';
+import { deleteRepo, getRepoById, updateRepo } from './api.js';
 
 setupMenuModal('menuToggle', 'menuModal', 'closeModal');
 showImagePreview();
@@ -12,8 +13,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const id = urlParams.get('id');
 
     try {
-        const response = await fetch(`http://localhost:3001/api/repos/${id}`);
-        const result = await response.json();
+        const result = await getRepoById(id);
 
         document.getElementById('name').value = result.name;
         document.getElementById('description').value = result.description;
@@ -83,14 +83,8 @@ document.getElementById('update-form').addEventListener('submit', async function
     }
 
     try {
-        const response = await fetch(`http://localhost:3001/api/repos/update/${id}`, {
-            method: 'PUT',
-            body: repoData,
-        });
-
-        if (response.ok) {
-            window.location.href = `./index.html`;
-        } 
+        await updateRepo(id, repoData);
+        window.location.assign('./index.html');
     } catch (e) {
         console.error(e);
     }
@@ -101,18 +95,13 @@ document.getElementById('delete-button').addEventListener('click', async functio
     const id = urlParams.get('id');
 
     try {
-        const response = await fetch(`http://localhost:3001/api/repos/delete/${id}`, {
-            method: 'DELETE'
-        });
-
-        if (response.ok) {
-            window.location.href = `./index.html`;
-        }
+        await deleteRepo(id);
+        window.location.href = `./index.html`;
     } catch (error) {
         console.error(error);
     }
 });
 
 document.getElementById('cancel-button').addEventListener('click', function () {
-    window.location.assign('./index.html')
-})
+    window.location.assign('./index.html');
+});

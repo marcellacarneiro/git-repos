@@ -1,3 +1,4 @@
+import { createRepo } from './api.js';
 import { setupMenuModal } from './modal.js';
 import { showImagePreview, showDemoPreview, clearImagePreview, clearDemoPreview } from './previews.js';
 
@@ -19,32 +20,24 @@ document.getElementById('registration-form').addEventListener('submit', async (e
     const image = document.getElementById('image').files[0];
     const demo = document.getElementById('demo').files[0];
 
+    const repoData = new FormData();
+    repoData.append('name', name);
+    repoData.append('description', description);
+    repoData.append('languages', languages);
+    repoData.append('figmaUrl', figmaUrl);
+    repoData.append('githubUrl', githubUrl);
+    repoData.append('deployUrl', deployUrl);
+    repoData.append('image', image);
+    repoData.append('demo', demo);
+
     try {
-        const repoData = new FormData();
-        repoData.append('name', name);
-        repoData.append('description', description);
-        repoData.append('languages', languages);
-        repoData.append('figmaUrl', figmaUrl);
-        repoData.append('githubUrl', githubUrl);
-        repoData.append('deployUrl', deployUrl);
-        repoData.append('image', image);
-        repoData.append('demo', demo);
-
-        const response = await fetch('http://localhost:3001/api/repos/create', {
-            method: 'POST',
-            body: repoData,
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-            window.location.assign('http://127.0.0.1:5500/index.html')
-        }
+        await createRepo(repoData);
+        window.location.assign('./index.html');
     } catch (e) {
         console.error(e);
     }
 });
 
 document.getElementById('cancel-button').addEventListener('click', function () {
-    window.location.assign('./index.html')
-})
+    window.location.assign('./index.html');
+});

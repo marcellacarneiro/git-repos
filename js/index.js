@@ -1,4 +1,5 @@
 import { setupMenuModal } from './modal.js';
+import { getRepos } from './api.js';
 
 setupMenuModal('menuToggle', 'menuModal', 'closeModal');
 
@@ -9,14 +10,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pageNumbersContainer = document.getElementById('page-numbers');
 
     let currentPage = 1;
-    const limit = 9;  
-    let totalPages = 1; 
+    const limit = 9;
+    let totalPages = 1;
 
     const loadRepos = async (page) => {
         try {
             const offset = (page - 1) * limit;
-            const response = await fetch(`http://localhost:3001/api/repos?offset=${offset}&limit=${limit}`);
-            const data = await response.json();
+            const data = await getRepos(offset, limit);
 
             totalPages = data.totalPages;
 
@@ -78,5 +78,3 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     loadRepos(currentPage);
 });
-
-
