@@ -135,16 +135,26 @@ form {
 
         #submit-button {
             background-color: v.$bg-green-color;
+            &:hover {
+                opacity: .9;
+            }
         }
 
         #delete-button {
             background-color: v.$bg-red-color;
+            &:hover {
+                opacity: .9;
+            }
         }
 
         #cancel-button {
             color: v.$text-red-color;
             background-color: #f6f8fa;
             border: v.$border-style;
+
+            &:hover {
+                background-color: v.$bg-light-gray-color;
+            }
         }
 
         @media screen and (min-width: 768px) {

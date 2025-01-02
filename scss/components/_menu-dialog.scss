@@ -32,13 +32,19 @@ dialog {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 0.5rem 0 0.5rem;
+            padding: 0.5rem 0;
 
             .close {
                 cursor: pointer;
 
                 img {
-                    width: 1.375rem;
+                    padding: 0.15rem;
+                    width: 1.75rem;
+                    border-radius: v.$border-radius-sm;
+
+                    &:hover {
+                        background-color: v.$bg-light-gray-color;
+                    }
                 }
             }
         }

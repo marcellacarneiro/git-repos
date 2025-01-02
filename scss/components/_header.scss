@@ -59,6 +59,10 @@ header {
             border-radius: 1px;
         }
 
+        &:hover {
+            background-color: v.$bg-light-gray-color;
+        }
+
         @media screen and (min-width: 1024px) {
             display: none;
         }
