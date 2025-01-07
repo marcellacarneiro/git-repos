@@ -95,8 +95,11 @@ document.getElementById('delete-button').addEventListener('click', async functio
     const id = urlParams.get('id');
 
     try {
-        await deleteRepo(id);
-        window.location.href = `./index.html`;
+        const ok = confirm("Tem certeza de que deseja deletar este repositório?");
+        if(ok){
+            await deleteRepo(id);
+            window.location.href = `./index.html`;
+        }
     } catch (error) {
         console.error(error);
     }
