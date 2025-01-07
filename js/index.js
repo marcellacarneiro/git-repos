@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     reposContainer.appendChild(div);
                 }
-            } else {
-                reposContainer.innerHTML = `<p>Nenhum repositório encontrado.</p>`;
             }
 
             updatePagination(data.currentPage, totalPages);

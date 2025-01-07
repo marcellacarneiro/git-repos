@@ -10,7 +10,7 @@ const apiFetch = async (endpoint, options = {}) => {
         return response.json();
     } catch (e) {
         console.error(`Erro API: ${e}`);
-        throw error;
+        throw e;
     }
 };
 
