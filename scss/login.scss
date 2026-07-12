@@ -1,0 +1,71 @@
+@use './variables' as v;
+@use './mixins' as m;
+@use './default';
+@use 'components/menu-dialog';
+@use 'components/title';
+@use 'components/form';
+@use 'components/footer';
+
+header{
+    height: 4rem;
+}
+
+main {
+    display: flex;
+
+    .container {
+        @include m.flex-center();
+        max-width: 768px;
+        width: 50%;
+
+        .logo-container {
+            img {
+                width: 4rem;
+            }
+        }
+
+        .title-container {
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+form {
+    margin-block: 2rem;
+    width: 100%;
+
+    .login-form-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto;
+        gap: 1.375rem;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+
+            label {
+                font-weight: v.$font-weight-semi-bold;
+            }
+
+            input {
+                @include m.input-style();
+                height: 1.875rem;
+            }
+        }
+
+        .actions-container {
+            button {
+                width: 100%;
+                height: 2.5rem;
+            }
+        }
+    }
+}
