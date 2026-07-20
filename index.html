@@ -15,7 +15,10 @@
                 <img src="./assets/github-original.svg" alt="" class="logo">
             </div>
             <nav class="menu-container">
-                <ul class="menu">
+                <ul class="menu menu-logged-off">
+                    <li class="menu-item" id="login-button"><a href="./login.html">Login</a></li>
+                </ul>
+                <ul class="menu menu-logged-in hidden">
                     <li class="menu-item"><a href="./index.html">Repositórios</a></li>
                     <li class="menu-item"><a href="./register-repo.html">Adicionar Repositório</a></li>
                 </ul>
@@ -35,7 +38,14 @@
                     <img src="./assets/icons/close.svg" alt="">
                 </span>
             </div>
-            <ul class="modal-menu">
+            <ul class="modal-menu menu-logged-off">
+                <li>
+                    <a href="./login.html">
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="modal-menu menu-logged-in hidden">
                 <li>
                     <a href="./index.html">
                         <img src="./assets/icons/home.svg" alt="">
@@ -72,6 +82,7 @@
     <footer>
         <p>© 2024 - Todos os direitos reservados.</p>
     </footer>
+    <!-- <script type="module" src="./js/auth.js"></script> -->
     <script type="module" src="./js/index.js"></script>
 </body>
 

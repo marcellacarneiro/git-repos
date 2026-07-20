@@ -1,7 +1,9 @@
 import { setupMenuModal } from './modal.js';
 import { showImagePreview, showDemoPreview, clearImagePreview, clearDemoPreview } from './previews.js';
-import { deleteRepo, getRepoById, updateRepo } from './api.js';
+import { deleteRepo, getRepoById, getUser, updateRepo } from './api.js';
+import { setupMenu } from './menu.js';
 
+setupMenu();
 setupMenuModal('menuToggle', 'menuModal', 'closeModal');
 showImagePreview();
 showDemoPreview();
@@ -95,8 +97,8 @@ document.getElementById('delete-button').addEventListener('click', async functio
     const id = urlParams.get('id');
 
     try {
-        const ok = confirm("Tem certeza de que deseja deletar este repositório?");
-        if(ok){
+        const ok = confirm('Tem certeza de que deseja deletar este repositório?');
+        if (ok) {
             await deleteRepo(id);
             window.location.href = `./index.html`;
         }

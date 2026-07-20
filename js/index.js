@@ -1,7 +1,9 @@
 import { setupMenuModal } from './modal.js';
-import { getRepos } from './api.js';
+import { getRepos, getUser } from './api.js';
+import { setupMenu } from './menu.js';
 
 setupMenuModal('menuToggle', 'menuModal', 'closeModal');
+setupMenu();
 
 document.addEventListener('DOMContentLoaded', async () => {
     const reposContainer = document.getElementById('repos-container');

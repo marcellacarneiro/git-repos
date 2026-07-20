@@ -18,6 +18,10 @@
     max-width: 71.25rem;
 }
 
+.hidden {
+    display: none !important;
+}
+
 body {
     background-color: v.$bg-default-color;
     min-height: 100vh;
