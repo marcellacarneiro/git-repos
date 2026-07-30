@@ -1,13 +1,11 @@
 import { getUser } from './api.js';
 
 export async function setupMenu() {
-    console.log('setupMenu iniciou');
     const menusLoggedIn = document.querySelectorAll('.menu-logged-in');
     const menusLoggedOff = document.querySelectorAll('.menu-logged-off');
 
     try {
-        const user = await getUser();
-        console.log('Usuário:', user);
+        await getUser();
 
         menusLoggedIn.forEach((menu) => {
             menu.classList.remove('hidden');
