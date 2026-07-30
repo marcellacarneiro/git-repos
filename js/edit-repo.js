@@ -2,6 +2,7 @@ import { setupMenuModal } from './modal.js';
 import { showImagePreview, showDemoPreview, clearImagePreview, clearDemoPreview } from './previews.js';
 import { deleteRepo, getRepoById, getUser, updateRepo } from './api.js';
 import { setupMenu } from './menu.js';
+import { setupEditMode } from './edit-form.js';
 
 setupMenu();
 setupMenuModal('menuToggle', 'menuModal', 'closeModal');
@@ -9,6 +10,7 @@ showImagePreview();
 showDemoPreview();
 clearImagePreview();
 clearDemoPreview();
+setupEditMode();
 
 document.addEventListener('DOMContentLoaded', async function () {
     const urlParams = new URLSearchParams(window.location.search);

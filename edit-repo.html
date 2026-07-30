@@ -72,27 +72,27 @@
                     <div class="form-left">
                         <div class="input-container">
                             <label for="name">Nome do Repositório *</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" disabled>
                         </div>
                         <div class="input-container">
                             <label for="description">Descrição</label>
-                            <textarea name="description" id="description" cols="10" rows="10"></textarea>
+                            <textarea name="description" id="description" cols="10" rows="10" disabled></textarea>
                         </div>
                         <div class="input-container">
                             <label for="languages">Linguagens / Ferramentas</label>
-                            <input type="text" name="languages" id="languages">
+                            <input type="text" name="languages" id="languages" disabled>
                         </div>
                         <div class="input-container">
                             <label for="figmaUrl">Link do projeto no Figma</label>
-                            <input type="text" name="figmaUrl" id="figmaUrl">
+                            <input type="text" name="figmaUrl" id="figmaUrl" disabled>
                         </div>
                         <div class="input-container">
                             <label for="githubUrl">Link do projeto no GitHub</label>
-                            <input type="text" name="githubUrl" id="githubUrl">
+                            <input type="text" name="githubUrl" id="githubUrl" disabled>
                         </div>
                         <div class="input-container">
                             <label for="deployUrl">Link do Deploy</label>
-                            <input type="text" name="deployUrl" id="deployUrl">
+                            <input type="text" name="deployUrl" id="deployUrl" disabled>
                         </div>
                     </div>
                     <div class="form-right">
@@ -101,12 +101,12 @@
                             <div class="custom-file-wrapper">
                                 <label class="custom-file-label" for="image">Selecionar arquivo</label>
                                 <input class="custom-file-input" type="file" name="image" id="image"
-                                    accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp">
+                                    accept="image/jpeg, image/png, image/gif, image/svg+xml, image/webp" disabled>
                             </div>
                             <div class="file-preview">
                                 <img id="image-preview" src="" alt="">
                             </div>
-                            <button type="button" id="clear-image">Limpar Imagem</button>
+                            <button type="button" id="clear-image" disabled>Limpar Imagem</button>
                         </div>
                         <div class="input-container">
                             <label for="demo">Demo</label>
@@ -118,13 +118,13 @@
                             <div class="file-preview">
                                 <img id="demo-preview" src="" alt="">
                             </div>
-                            <button type="button" id="clear-demo">Limpar Demo</button>
+                            <button type="button" id="clear-demo" disabled>Limpar Demo</button>
                         </div>
                     </div>
                 </div>
                 <div class="actions-container">
-                    <button id="submit-button" type="submit">Editar Repositório</button>
-                    <button id="delete-button" type="button">Deletar Repositório</button>
+                    <button id="submit-button" type="submit" class="hidden">Editar Repositório</button>
+                    <button id="delete-button" type="button" class="hidden">Deletar Repositório</button>
                     <button id="cancel-button" type="button">Cancelar</button>
                 </div>
             </form>

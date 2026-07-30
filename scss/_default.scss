@@ -22,6 +22,13 @@
     display: none !important;
 }
 
+input:disabled, textarea:disabled, button:disabled {
+    background-color: #f5f5f5;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    border: 1px solid #d3d3d3;
+}
+
 body {
     background-color: v.$bg-default-color;
     min-height: 100vh;
