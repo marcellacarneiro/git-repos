@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     div.innerHTML = `
                         <div class="repo__infos">
                             <a href="edit-repo.html?id=${repo._id}">
+                             <img src="../assets/icons/book.svg"/>
                                 <h3>${repo.name}</h3>
                             </a>
                             <p>${repo.description}</p>

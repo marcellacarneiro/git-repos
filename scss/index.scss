@@ -58,11 +58,15 @@ main {
 
                     .repo__infos {
                         a {
+                            display: flex;
+                            margin-bottom: 0.625rem;
+                            gap: 0.4rem;
+                            
                             h3 {
                                 color: v.$text-blue-color;
                                 font-size: v.$font-size-lg;
                                 font-weight: v.$font-weight-semi-bold;
-                                margin-bottom: 0.625rem;
+                                margin-bottom: 0.25rem;
                             }
 
                             &:hover {
