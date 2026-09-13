@@ -26,7 +26,7 @@ const apiFetch = async (endpoint, options = {}) => {
 };
 
 export const login = (username, password) => {
-    return apiFetch(`/api/users/login`, {
+    return apiFetch(`/users/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
