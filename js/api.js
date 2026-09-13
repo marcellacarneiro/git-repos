@@ -25,6 +25,19 @@ const apiFetch = async (endpoint, options = {}) => {
     }
 };
 
+export const login = (username, password) => {
+    return apiFetch(`/api/users/login`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username,
+            password,
+        }),
+    });
+};
+
 export const getRepos = (offset, limit) => {
     return apiFetch(`/repos?offset=${offset}&limit=${limit}`);
 };
@@ -55,4 +68,4 @@ export const deleteRepo = (id) => {
 
 export const getUser = () => {
     return apiFetch(`/users/auth/me`);
-}
+};
