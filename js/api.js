@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = 'https://git-repos-api-beta.vercel.app/api';
 
 const apiFetch = async (endpoint, options = {}) => {
     const token = sessionStorage.getItem('token');
