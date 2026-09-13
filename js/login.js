@@ -7,13 +7,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await login(username, password);
-
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.message);
-        }
+        const data = await login(username, password);
 
         sessionStorage.setItem('token', data.token);
 
