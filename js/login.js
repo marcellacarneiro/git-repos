@@ -1,4 +1,4 @@
-import { login } from "./api";
+import { login } from "./api.js";
 
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
